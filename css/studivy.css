@@ -1,0 +1,183 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --bg-light: #f0f9ff;
+  --bg-dark: #dbeafe;
+  --primary: #0ea5e9;
+  --primary-dark: #1e40af;
+  --text: #1f2937;
+  --text-light: #475569;
+  --card-bg: rgba(255, 255, 255, 0.3);
+  --shadow: rgba(0, 0, 0, 0.07);
+  --radius: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, var(--bg-light), var(--bg-dark));
+  color: var(--text);
+  line-height: 1.6;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 30px 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 50px 30px;
+  background: var(--card-bg);
+  border-radius: 25px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  margin-top: 12px;
+}
+
+/* Section */
+.section {
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.section h2 {
+  font-size: 1.7rem;
+  color: var(--primary-dark);
+  margin-bottom: 25px;
+  border-left: 6px solid var(--primary);
+  padding-left: 15px;
+  position: relative;
+}
+
+.section::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  margin: 30px 0;
+  background: linear-gradient(to right, #3b82f6, #38bdf8);
+  border-radius: 5px;
+}
+
+/* Tools List */
+.tools-list {
+  list-style: disc;
+  margin-left: 30px;
+  color: var(--text-light);
+  font-size: 1rem;
+}
+
+/* Insight Block */
+.insight-block {
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 20px var(--shadow);
+  margin-bottom: 45px;
+  padding: 25px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.insight-block:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.insight-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.insight-images img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.insight-images img:hover {
+  transform: scale(1.02);
+}
+
+/* Insight Text */
+.insight-text h3 {
+  font-size: 1.3rem;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.insight-text p {
+  font-size: 1rem;
+  color: var(--text-light);
+}
+
+/* Back Button */
+.btn-back {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #00b4d8, #0077b6);
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 183, 255, 0.25);
+}
+
+.btn-back:hover {
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 183, 255, 0.35);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 25px 20px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .section h2 {
+    font-size: 1.4rem;
+  }
+
+  .insight-images img {
+    max-width: 100%;
+  }
+}
